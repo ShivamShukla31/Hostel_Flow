@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120">
+
+  <!-- Background -->
+  <rect width="520" height="120" fill="#0d1117"/>
+
+  <!-- "Hostel" bold white -->
+  <text
+    x="32" y="72"
+    font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+    font-size="52" font-weight="900"
+    fill="#ffffff"
+    letter-spacing="-1">Hostel</text>
+
+  <!-- "Flow" bold blue -->
+  <text
+    x="232" y="72"
+    font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+    font-size="52" font-weight="900"
+    fill="#3B82F6"
+    letter-spacing="-1">Flow</text>
+
+  <!-- Tagline -->
+  <text
+    x="32" y="100"
+    font-family="'Helvetica Neue',Arial,sans-serif"
+    font-size="13" font-weight="400"
+    fill="#3B82F6" opacity="0.85"
+    letter-spacing="4">COMPLAINT · ASSIGN · RESOLVE</text>
+
+  <!-- Bottom accent line -->
+  <line x1="32" y1="110" x2="488" y2="110" stroke="#3B82F6" stroke-width="1.5" opacity="0.3"/>
+
+</svg>

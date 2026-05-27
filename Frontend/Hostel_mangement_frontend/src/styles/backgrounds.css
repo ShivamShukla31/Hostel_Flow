@@ -1,0 +1,186 @@
+/* Campus Care App - Background Styles */
+
+/* ===== Background Images ===== */
+
+/* Hero Section Background - For Landing Pages */
+.bg-hero {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Auth Pages Background - Register/Login */
+.bg-auth-page {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dashboard Background */
+.bg-dashboard {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* About Page Background */
+.bg-about-hero {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== Image Descriptions ===== */
+
+/* 
+  Current Background Images Used:
+  
+  1. Hero/Landing: Modern hostel common area with students
+     URL: https://images.unsplash.com/photo-1519389950473-47ba0277781c
+     Shows: Student collaboration spaces, community living
+  
+  2. Register: Student workspace/study area in hostel
+     URL: https://images.unsplash.com/photo-1517694712202-14dd9538aa97
+     Shows: Student accommodation, workspace, modern dorm
+  
+  3. Login: Student workspace with modern decor
+     URL: https://images.unsplash.com/photo-1519389950473-47ba0277781c
+     Shows: Welcoming student living space
+  
+  4. About Hero: Campus community and student life
+     URL: https://images.unsplash.com/photo-1552664730-d307ca884978
+     Shows: Student community, hostel facilities
+  
+  5. Dashboard: Student workspace for productivity
+     URL: https://images.unsplash.com/photo-1517694712202-14dd9538aa97
+     Shows: Modern hostel accommodation workspace
+*/
+
+/* ===== Gradient Overlays ===== */
+
+/* Auth Page Gradient - Blue to Indigo with transparency */
+.overlay-auth {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.3),
+    rgba(79, 70, 229, 0.3)
+  );
+}
+
+/* Hero Gradient - Darker for better text visibility */
+.overlay-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.7),
+    rgba(79, 70, 229, 0.7)
+  );
+}
+
+/* About Hero Gradient */
+.overlay-about {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.75),
+    rgba(79, 70, 229, 0.75)
+  );
+}
+
+/* Dashboard Gradient - Light overlay */
+.overlay-dashboard {
+  background: linear-gradient(
+    135deg,
+    rgba(249, 250, 251, 0.95),
+    rgba(243, 244, 246, 0.95)
+  );
+}
+
+/* ===== Responsive Adjustments ===== */
+
+@media (max-width: 768px) {
+  .bg-hero,
+  .bg-auth-page,
+  .bg-dashboard,
+  .bg-about-hero {
+    background-attachment: scroll;
+  }
+}
+
+/* ===== Smooth Animations ===== */
+
+/* Subtle fade-in animation for pages */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Parallax effect for hero sections */
+@keyframes parallax {
+  0% {
+    background-position: center 0px;
+  }
+  100% {
+    background-position: center 50px;
+  }
+}
+
+.parallax-effect {
+  animation: parallax 20s ease-in-out infinite;
+}
+
+/* ===== Accessibility ===== */
+
+/* Ensure text is readable over backgrounds */
+.text-over-bg {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .overlay-auth {
+    background: linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.4),
+      rgba(88, 80, 236, 0.4)
+    );
+  }
+
+  .overlay-dashboard {
+    background: linear-gradient(
+      135deg,
+      rgba(31, 41, 55, 0.9),
+      rgba(30, 41, 59, 0.9)
+    );
+  }
+}
+
+/* ===== Performance Optimization ===== */
+
+/* Use will-change for better performance */
+.bg-hero,
+.bg-auth-page,
+.bg-dashboard {
+  will-change: background-position;
+}
+
+/* Reduce motion for users with motion sensitivity */
+@media (prefers-reduced-motion: reduce) {
+  .bg-hero,
+  .bg-auth-page,
+  .bg-dashboard,
+  .bg-about-hero {
+    background-attachment: scroll;
+    animation: none;
+  }
+}
