@@ -69,10 +69,17 @@ npm install
 cp .env.example .env
 ```
 
-4. Update .env with your configuration
+4. Update `.env` with your configuration
+
+Use the Vite environment variable `VITE_API_URL` (do NOT include `/api`). Example for local development:
+
 ```
-REACT_APP_API_URL=http://localhost:3000/api
+VITE_API_URL=http://localhost:3000
 ```
+
+For production (Vercel), add the `VITE_API_URL` environment variable in your Vercel project settings pointing to your backend (Render) URL, for example `https://hostel-flow-hpqy.onrender.com`.
+
+Important: Do not commit your `.env` file. Use `.env.example` to document example values.
 
 ### Running the Application
 
